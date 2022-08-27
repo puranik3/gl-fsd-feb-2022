@@ -9,6 +9,6 @@ function sum1( x, y ) {
 // console.log( sum2( 12, 13 ) ); // error
 
 // not "hoisted" - created Just-in-time
-const sum2 = function( x, y ) {
+var sum2 = function( x, y ) {
     return x + y;
 };
