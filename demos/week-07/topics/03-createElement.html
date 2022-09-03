@@ -8,12 +8,23 @@
     </head>
     <body>
         <p class="message"></p>
-
+        
         <script>
             /**
              * Using createElement, createTextNode, appendChild
              */
+            const text1 = document.createTextNode( 'Hello ' );
+            const text2 = document.createTextNode( 'DOM' );
+            const strongEl = document.createElement( 'strong' );
 
+            strongEl.appendChild( text2 );
+
+            console.log( strongEl );
+
+            const messageEl = document.querySelector( '.message' );
+
+            messageEl.appendChild( text1 );
+            messageEl.appendChild( strongEl );
         </script>
     </body>
 </html>

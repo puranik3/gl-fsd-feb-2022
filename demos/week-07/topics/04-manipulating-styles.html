@@ -17,16 +17,27 @@
                 background-color: olive;
                 color: ivory;
             }
+
+            .bold {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
-        <p class="message">Your email was sent</p>
+        <p class="message bold">Your email was sent</p>
 
         <script>
             /**
              * Do some inline styling. Add appropriate class.
              */
+            const messageEl = document.querySelector( '.message' );
+            
+            messageEl.classList.add( 'message-success' );
+            messageEl.classList.remove( 'bold' );
 
+            messageEl.style.fontSize = '2em';
+            messageEl.style.fontStyle = 'italic';
+            messageEl.style.fontSize = '';
         </script>
     </body>
 </html>
