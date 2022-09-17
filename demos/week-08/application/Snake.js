@@ -19,12 +19,43 @@ export default class Snake {
         // draw head of snake
         const x = cellSize * this.head.x;
         const y = cellSize * this.head.y;
+        const size = cellSize / 10;
+        const offset = cellSize / 3;
 
         ctx.fillStyle = 'black';
         ctx.fillRect( x, y, cellSize, cellSize );
 
-        // @todo Eyes have to be drawn
-        // ...
+        // draw the eyes
+        switch (this.direction) {
+            case "Up":
+                ctx.beginPath();
+                ctx.arc( x + offset, y + offset, size, 0, 2 * Math.PI );
+                ctx.arc( x + 2 * offset, y + offset, size, 0, 2 * Math.PI );
+                ctx.fillStyle = "white";
+                ctx.fill();
+                break;
+            case "Down":
+                ctx.beginPath();
+                ctx.arc( x + offset, y + 2 * offset, size, 0, 2 * Math.PI );
+                ctx.arc( x + 2 * offset, y + 2 * offset, size, 0, 2 * Math.PI );
+                ctx.fillStyle = "white";
+                ctx.fill();
+                break;
+            case "Right":
+                ctx.beginPath();
+                ctx.arc( x + 2 * offset, y + offset, size, 0, 2 * Math.PI );
+                ctx.arc( x + 2 * offset, y + 2 * offset, size, 0, 2 * Math.PI );
+                ctx.fillStyle = "white";
+                ctx.fill();
+                break;
+            case "Left":
+                ctx.beginPath();
+                ctx.arc( x + offset, y + offset, size, 0, 2 * Math.PI );
+                ctx.arc( x + offset, y + 2 * offset, size, 0, 2 * Math.PI );
+                ctx.fillStyle = "white";
+                ctx.fill();
+                break;
+        }
 
         // draw tail of snake
         ctx.fillStyle = '#777777';
