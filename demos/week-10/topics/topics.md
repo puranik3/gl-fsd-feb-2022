@@ -1,11 +1,4 @@
 # Week 10
-
-- Conditional Rendering
-- Constructor
-- Controlled and Uncontrolled Components
-- Create React App
-- JSX and TSX
-- List, Map and Key
 - React - Features
 - React - Introduction
 - React - Pros and Cons
@@ -18,3 +11,9 @@
 - React Refs
 - React State
 - React Vs Angular
+- Conditional Rendering
+- Constructor
+- Controlled and Uncontrolled Components
+- Create React App
+- JSX and TSX
+- List, Map and Key
