@@ -16,9 +16,23 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 
         <script type="text/babel">
+            const Counter = () => {
+                const [ value, setValue ] = React.useState( 0 );
+
+                const decrement = () => setValue( value - 1 );
+                const increment = () => setValue( value + 1 );
+
+                return (
+                    <>
+                        <button onClick={decrement}>-</button>
+                        <span>{value}</span>
+                        <button onClick={increment}>+</button>
+                    </>
+                )
+            }
             
             const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
-            root.render(  );
+            root.render( <Counter /> );
         </script>
     </body>
 </html>
